@@ -1,6 +1,6 @@
 # Usage Examples
 
-This document provides detailed examples of using the Skill-aware Chat Runtime.
+This document provides detailed examples of using the Chat Skills Runtime.
 
 ## Example 1: PDF Summary with Skill
 
@@ -193,7 +193,7 @@ Skills trigger based on keywords. Include terms like:
 
 Run with `--show-routing` to see which skills are selected:
 ```bash
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 ```
 
 This helps you understand what triggers skills.

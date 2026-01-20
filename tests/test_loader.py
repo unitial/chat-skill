@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import os
 
-from skill_chat.skills.loader import SkillLoader, Skill
+from chat_skills.skills.loader import SkillLoader, Skill
 
 
 @pytest.fixture

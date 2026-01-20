@@ -7,8 +7,8 @@ from agentscope.model import ChatModelBase
 from agentscope.memory import InMemoryMemory
 from agentscope.message import Msg
 
-from skill_chat.skills.loader import Skill
-from skill_chat.utils import extract_text_from_response
+from chat_skills.skills.loader import Skill
+from chat_skills.utils import extract_text_from_response
 
 
 class SkillChatAgent:

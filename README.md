@@ -1,4 +1,4 @@
-# Skill-aware Chat Runtime
+# Chat Skills Runtime
 
 A local, skill-aware conversational AI runtime built on [AgentScope](https://github.com/modelscope/agentscope) that dynamically loads and applies specialized skills during conversations. Compatible with OpenSkills/Claude Skills format.
 
@@ -18,7 +18,7 @@ A local, skill-aware conversational AI runtime built on [AgentScope](https://git
 
 ```bash
 # Clone the repository
-cd claude-skill-chat
+cd claude-chat-skills
 
 # Install dependencies
 pip install -r requirements.txt
@@ -40,13 +40,13 @@ pip install -e .
 export OPENAI_API_KEY="your-api-key-here"
 
 # Run with demo skills
-chat-with-skills --skills-dir ./demo_skills
+chat-skills --skills-dir ./demo_skills
 
 # Show routing decisions
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 
 # Use specific models
-chat-with-skills \
+chat-skills \
   --skills-dir ./demo_skills \
   --chat-model gpt-4 \
   --router-model gpt-3.5-turbo \
@@ -59,7 +59,7 @@ chat-with-skills \
 export OPENAI_API_KEY="ollama"
 export OPENAI_BASE_URL="http://localhost:11434/v1"
 
-chat-with-skills \
+chat-skills \
   --skills-dir ./demo_skills \
   --chat-model llama3.2 \
   --router-model llama3.2 \
@@ -197,7 +197,7 @@ Assistant: I'm doing great, thank you for asking\! How can I help you today?
 ## Command Line Options
 
 ```
-chat-with-skills [OPTIONS]
+chat-skills [OPTIONS]
 
 Options:
   --skills-dir PATH          Path to skills directory
@@ -213,8 +213,8 @@ Options:
 ## Project Structure
 
 ```
-claude-skill-chat/
-├── skill_chat/              # Main package
+claude-chat-skills/
+├── chat_skills/              # Main package
 │   ├── __init__.py
 │   ├── cli.py              # CLI entry point
 │   ├── skills/
@@ -281,7 +281,7 @@ Details...
 
 3. Test your skill:
 ```bash
-chat-with-skills --skills-dir ~/.claude/skills --show-routing
+chat-skills --skills-dir ~/.claude/skills --show-routing
 ```
 
 ## Environment Variables
@@ -323,7 +323,7 @@ pytest tests/
 
 ```bash
 # Use GPT-4 for chat, GPT-3.5 for routing (cost optimization)
-chat-with-skills \
+chat-skills \
   --chat-model gpt-4 \
   --router-model gpt-3.5-turbo \
   --skills-dir ./demo_skills
@@ -333,14 +333,14 @@ chat-with-skills \
 
 ```bash
 # Allow maximum 2 skills per query
-chat-with-skills --max-skills 2 --skills-dir ./demo_skills
+chat-skills --max-skills 2 --skills-dir ./demo_skills
 ```
 
 ### Custom Skills Directory
 
 ```bash
 # Use your own skills collection
-chat-with-skills --skills-dir /path/to/my/skills
+chat-skills --skills-dir /path/to/my/skills
 ```
 
 ## License

@@ -5,7 +5,7 @@ import json
 import asyncio
 from unittest.mock import Mock, MagicMock, AsyncMock
 
-from skill_chat.router.agent import SkillRouterAgent, RoutingDecision
+from chat_skills.router.agent import SkillRouterAgent, RoutingDecision
 
 
 @pytest.fixture

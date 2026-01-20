@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Verification script for Skill-aware Chat Runtime
+Verification script for Chat Skills Runtime
 Checks that all components are properly installed and configured
 """
 
@@ -22,11 +22,11 @@ def check_python_version():
 def check_project_structure():
     """Check project structure."""
     required_files = [
-        "skill_chat/__init__.py",
-        "skill_chat/cli.py",
-        "skill_chat/skills/loader.py",
-        "skill_chat/router/agent.py",
-        "skill_chat/chat/agent.py",
+        "chat_skills/__init__.py",
+        "chat_skills/cli.py",
+        "chat_skills/skills/loader.py",
+        "chat_skills/router/agent.py",
+        "chat_skills/chat/agent.py",
         "demo_skills/pdf_summary/SKILL.md",
         "demo_skills/paper_review/SKILL.md",
         "demo_skills/course_outline/SKILL.md",
@@ -88,7 +88,7 @@ def check_agentscope():
 
 def check_skills():
     """Check demo skills."""
-    from skill_chat.skills.loader import SkillLoader
+    from chat_skills.skills.loader import SkillLoader
 
     loader = SkillLoader(Path("demo_skills"))
     skills = loader.load_skills()
@@ -146,9 +146,9 @@ def main():
     print("=" * 50)
 
     if passed == total:
-        print("\n✓ All checks passed! You're ready to use skill-chat.")
+        print("\n✓ All checks passed! You're ready to use chat-skills.")
         print("\nTry it out:")
-        print("  chat-with-skills --skills-dir ./demo_skills --show-routing")
+        print("  chat-skills --skills-dir ./demo_skills --show-routing")
         return 0
     elif passed >= total - 1:
         print("\n⚠ Most checks passed. Review warnings above.")

@@ -30,7 +30,7 @@ source venv/bin/activate
 export DEEPSEEK_API_KEY='sk-your-key-here'
 
 # 3. 运行
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 ```
 
 ### 方式 3: 永久设置（推荐）
@@ -69,20 +69,20 @@ source ~/.bashrc
 
 命令行选项：
 ```bash
-chat-with-skills --help  # 查看所有选项
+chat-skills --help  # 查看所有选项
 ```
 
 ## 常用配置
 
 ```bash
 # 使用不同的模型
-chat-with-skills --chat-model deepseek-coder --router-model deepseek-chat --skills-dir ./demo_skills
+chat-skills --chat-model deepseek-coder --router-model deepseek-chat --skills-dir ./demo_skills
 
 # 关闭路由显示
-chat-with-skills --no-show-routing --skills-dir ./demo_skills
+chat-skills --no-show-routing --skills-dir ./demo_skills
 
 # 限制最大技能数量
-chat-with-skills --max-skills 2 --skills-dir ./demo_skills --show-routing
+chat-skills --max-skills 2 --skills-dir ./demo_skills --show-routing
 ```
 
 ## 故障排除

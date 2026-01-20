@@ -13,9 +13,9 @@ from rich.markdown import Markdown
 import agentscope
 from agentscope.model import OpenAIChatModel
 
-from skill_chat.skills.loader import SkillLoader
-from skill_chat.router.agent import SkillRouterAgent
-from skill_chat.chat.agent import SkillChatAgent
+from chat_skills.skills.loader import SkillLoader
+from chat_skills.router.agent import SkillRouterAgent
+from chat_skills.chat.agent import SkillChatAgent
 
 
 console = Console()
@@ -24,7 +24,7 @@ console = Console()
 def print_welcome():
     """Print welcome message."""
     console.print(Panel.fit(
-        "[bold blue]Skill-aware Chat Runtime[/bold blue]\n"
+        "[bold blue]Chat Skills - Dynamic Skill Injection Runtime[/bold blue]\n"
         "Type your message and press Enter. Type 'exit' or 'quit' to exit.\n"
         "Type 'reset' to clear conversation history.",
         border_style="blue"

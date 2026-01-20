@@ -1,7 +1,7 @@
 #!/bin/bash
-# Quick start script for Skill-aware Chat Runtime
+# Quick start script for Chat Skills Runtime
 
-echo "=== Skill-aware Chat Runtime - Quick Start ==="
+echo "=== Chat Skills - Quick Start ==="
 echo ""
 
 # Check Python version
@@ -90,11 +90,11 @@ else
 fi
 
 # Install package
-echo "Installing skill-chat..."
+echo "Installing chat-skills..."
 if pip install -q -e .; then
-    echo "✓ skill-chat installed"
+    echo "✓ chat-skills installed"
 else
-    echo "✗ Failed to install skill-chat"
+    echo "✗ Failed to install chat-skills"
     exit 1
 fi
 
@@ -107,10 +107,10 @@ echo ""
 echo "=== Run the chat ==="
 echo "Virtual environment is already active. Simply run:"
 echo ""
-echo "  chat-with-skills --skills-dir ./demo_skills --show-routing"
+echo "  chat-skills --skills-dir ./demo_skills --show-routing"
 echo ""
 echo "Or with explicit model names:"
-echo "  chat-with-skills --skills-dir ./demo_skills --show-routing --chat-model deepseek-chat --router-model deepseek-chat"
+echo "  chat-skills --skills-dir ./demo_skills --show-routing --chat-model deepseek-chat --router-model deepseek-chat"
 echo ""
 echo "To deactivate virtual environment later: deactivate"
 echo ""

@@ -8,7 +8,7 @@ from pydantic import BaseModel, Field, field_validator
 from agentscope.model import ChatModelBase
 from agentscope.message import Msg
 
-from skill_chat.utils import extract_text_from_response
+from chat_skills.utils import extract_text_from_response
 
 
 class RoutingDecision(BaseModel):

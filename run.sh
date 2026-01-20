@@ -1,9 +1,9 @@
 #!/bin/bash
-# Run script for Skill-aware Chat Runtime
+# Run script for Chat Skills Runtime
 
 # Check if we're in the right directory
-if [ ! -f "skill_chat/cli.py" ]; then
-    echo "Error: Please run this script from the claude-skill-chat directory"
+if [ ! -f "chat_skills/cli.py" ]; then
+    echo "Error: Please run this script from the chat-skills directory"
     exit 1
 fi
 
@@ -39,7 +39,7 @@ fi
 
 # Run the chat
 echo ""
-echo "=== Starting Skill-aware Chat ==="
+echo "=== Starting Chat Skills ==="
 echo "API: DeepSeek"
 echo "Skills: ./demo_skills"
 echo ""
@@ -49,4 +49,4 @@ echo "  - Type 'exit' or 'quit' to exit"
 echo "  - Type 'reset' to clear conversation history"
 echo ""
 
-chat-with-skills --skills-dir ./demo_skills --show-routing "$@"
+chat-skills --skills-dir ./demo_skills --show-routing "$@"

@@ -29,7 +29,7 @@ sudo yum install python3-venv
 ### 步骤 3: 创建虚拟环境
 
 ```bash
-cd claude-skill-chat
+cd claude-chat-skills
 python3 -m venv venv
 ```
 
@@ -62,7 +62,7 @@ export DEEPSEEK_API_KEY='your-deepseek-key-here'
 ### 步骤 8: 运行
 
 ```bash
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 ```
 
 ## 方法 2: 全局安装（不推荐）
@@ -81,7 +81,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export DEEPSEEK_API_KEY='your-key'
 
 # 运行
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 ```
 
 ## 方法 3: 使用 --break-system-packages（不推荐）
@@ -95,7 +95,7 @@ pip install --break-system-packages -e .
 
 ## 常见问题排查
 
-### 问题 1: "command not found: chat-with-skills"
+### 问题 1: "command not found: chat-skills"
 
 **原因**: 命令没有在 PATH 中
 
@@ -108,7 +108,7 @@ source venv/bin/activate
 export PATH="$HOME/.local/bin:$PATH"
 
 # 或者直接运行
-python3 -m skill_chat.cli --skills-dir ./demo_skills --show-routing
+python3 -m chat_skills.cli --skills-dir ./demo_skills --show-routing
 ```
 
 ### 问题 2: "No module named 'agentscope'"
@@ -164,14 +164,14 @@ python3 verify.py
 ## 获取帮助
 
 ```bash
-chat-with-skills --help
+chat-skills --help
 ```
 
 ## 完整示例（从头开始）
 
 ```bash
 # 1. 进入项目目录
-cd claude-skill-chat
+cd claude-chat-skills
 
 # 2. 创建虚拟环境
 python3 -m venv venv
@@ -192,7 +192,7 @@ pip install -e .
 export DEEPSEEK_API_KEY='sk-your-key-here'
 
 # 8. 运行
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 
 # 9. 完成后退出虚拟环境
 deactivate
@@ -203,10 +203,10 @@ deactivate
 虚拟环境创建后，以后只需：
 
 ```bash
-cd claude-skill-chat
+cd claude-chat-skills
 source venv/bin/activate
 export DEEPSEEK_API_KEY='your-key'
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 ```
 
 ## 永久设置 API Key

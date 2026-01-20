@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "skill-chat"
+name = "chat-skills"
 version = "0.1.0"
-description = "Skill-aware Chat Runtime based on AgentScope"
+description = "Chat runtime with dynamic skill injection using AgentScope"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -22,8 +22,8 @@ dev = [
 ]
 
 [project.scripts]
-chat-with-skills = "skill_chat.cli:main"
+chat-skills = "chat_skills.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["skill_chat*"]
+include = ["chat_skills*"]

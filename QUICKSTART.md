@@ -86,16 +86,16 @@ source ~/.bashrc
 
 ```bash
 # 显示路由决策
-chat-with-skills --skills-dir ./demo_skills --show-routing
+chat-skills --skills-dir ./demo_skills --show-routing
 
 # 使用不同模型
-chat-with-skills --chat-model deepseek-coder --router-model deepseek-chat --skills-dir ./demo_skills
+chat-skills --chat-model deepseek-coder --router-model deepseek-chat --skills-dir ./demo_skills
 
 # 限制技能数量
-chat-with-skills --max-skills 2 --skills-dir ./demo_skills --show-routing
+chat-skills --max-skills 2 --skills-dir ./demo_skills --show-routing
 
 # 查看所有选项
-chat-with-skills --help
+chat-skills --help
 ```
 
 ## 故障排除
