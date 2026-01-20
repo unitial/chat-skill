@@ -66,6 +66,20 @@ chat-skills \
   --show-routing
 ```
 
+### Using with Proxy Services
+
+If you use LLM through proxy service `https://api.chatgpt.domain.com`, set envs like the following:
+
+```
+# Set the base url and api key
+export OPENAI_BASE_URL="https://api.chatgpt.domain.com/v1"
+export OPENAI_API_KEY="your-api-key-here"
+
+# Run with demo skills
+chat-skills --skills-dir ./demo_skills
+```
+
+
 ## How It Works
 
 ### Two-Phase Process
