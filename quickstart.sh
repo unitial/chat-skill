@@ -5,7 +5,7 @@ echo "=== Chat Skills - Quick Start ==="
 echo ""
 
 # Check Python version
-python_version=$(python3 --version 2>&1 | grep -oP '\d+\.\d+')
+python_version=$(python3 --version 2>&1 | sed -n 's/Python \([0-9]*\.[0-9]*\).*/\1/p')
 required_version="3.10"
 
 if [ "$(printf '%s\n' "$required_version" "$python_version" | sort -V | head -n1)" != "$required_version" ]; then
